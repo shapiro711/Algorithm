@@ -1,5 +1,5 @@
 //
-//  main.swift
+//  8393_합.swift
 //  Algorithm
 //
 //  Created by Kim Do hyung on 2021/11/23.
@@ -15,4 +15,3 @@ for i in 1...a {
 }
 
 print(result)
-
