@@ -1,8 +1,8 @@
 //
-//  main.swift
+//  11021_A+B-7.swift
 //  Algorithm
 //
-//  Created by Kim Do hyung on 2021/11/23.
+//  Created by Kim Do hyung on 2021/11/24.
 //
 
 import Foundation
@@ -20,5 +20,5 @@ for i in 0..<count {
 }
 
 for i in 0..<count {
-    print("Case #\(i+1): \(result[i])")
+    print("Case #\(i + 1): \(result[i])")
 }
