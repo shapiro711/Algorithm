@@ -1,8 +1,8 @@
 //
-//  main.swift
+//  2438_별_찍기-1.swift
 //  Algorithm
 //
-//  Created by Kim Do hyung on 2021/11/23.
+//  Created by Kim Do hyung on 2021/11/24.
 //
 
 import Foundation
