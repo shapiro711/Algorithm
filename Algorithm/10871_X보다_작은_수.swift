@@ -24,4 +24,4 @@ for comparedNumber in numberArr {
     if comparedNumber < x {
         print(comparedNumber)
     }
-}
+}ㅌ
