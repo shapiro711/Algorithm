@@ -11,17 +11,9 @@ func solution(_ lottos:[Int], _ win_nums:[Int]) -> [Int] {
     var maxValue = 0
     var minValue = 0
     var sortedArr = sortZero(lottos)
+    
     minValue = compare(sortedArr, win_nums)
     maxValue = minValue + lottos.count - sortedArr.count
-    
-    var minResult = 0
-    var maxResult = 0
-    
-    if minValue < 2 {
-        minResult = 6
-    } else {
-        
-    }
     
     return [calculateResult(maxValue), calculateResult(minValue)]
 }
