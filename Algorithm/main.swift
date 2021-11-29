@@ -7,18 +7,15 @@
 
 import Foundation
 
-var n = Int(readLine()!)!
-var result = 1
-
-func factorial() {
-    if n <= 1 {
-        print(result)
+func calculate(number: Int) {
+    if number < 2 {
+        print(number % 2, terminator: "")
         return
     } else {
-        result = result * n
-        n -= 1
-        factorial()
+        calculate(number: number/2)
+        print(number % 2, terminator: "")
     }
 }
 
-factorial()
+var n = Int(readLine()!)!
+calculate(number: n)

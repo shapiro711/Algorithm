@@ -12,7 +12,7 @@ var resultArr: [Int] = []
 
 for i in 0..<count {
     var line = readLine()!
-    var lineArr = line.split(separator: " ")
+    var lineArr = line.split(separator: " ").map { Int(String($0))! }
     let a = Int(lineArr[0])!
     let b = Int(lineArr[1])!
     let result = a + b
