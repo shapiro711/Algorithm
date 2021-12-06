@@ -1,5 +1,5 @@
 //
-//  시각.swift
+//  음료수 얼려 먹기.swift
 //  Algorithm
 //
 //  Created by Kim Do hyung on 2021/12/06.
@@ -7,37 +7,51 @@
 
 import Foundation
 
-var fisrtLine = Int(readLine()!)!
+var firstLine = readLine()!.split(separator: " ").map { Int(String($0))! }
+var map = [[Int]]()
 
-func convertNumber() -> Int {
-    var result = 0
-    result = (fisrtLine + 1) * 3600
-    return result
+for i in 0 ..< firstLine[0] {
+    var line = readLine()!.split(separator: " ").map { Int(String($0))! }
+    map.append(line)
 }
 
+print(map)
 
-func convertTime(number: Int) -> [String] {
-    var arr = [String]()
-    let time = number / 3600
-    let min = number % 3600 / 60
-    let second = number % 3600 % 60
+func dfs(x: Int, y: Int) -> Bool {
+    if x <= -1 || x > firstLine[0] - 1 || y <= -1 || y > firstLine[1] - 1 {
+        return false
+    }
     
-    let timeArr = String(time).unicodeScalars.map{ String($0) }
-    let minArr = String(min).unicodeScalars.map { String($0) }
-    let secondArr = String(second).unicodeScalars.map{ String($0) }
+    if map[x][y] == 0 {
+        map[x][y] = 1
+        
+        dfs(x: x-1, y: y)
+        dfs(x: x, y: y-1)
+        dfs(x: x+1, y: y)
+        dfs(x: x, y: y+1)
+        return true
+    }
     
-    arr = timeArr + minArr + secondArr
-    return arr
+    return false
 }
 
-func solution() -> Int {
-    var count = 0
-    
-    for number in 0...convertNumber()-1 {
-        if convertTime(number: number).contains("3") {
-            count += 1
+var result = 0
+
+for i in 0 ..< firstLine[0] {
+    for j in 0 ..< firstLine[1] {
+        if dfs(x: i, y: j) {
+            result += 1
         }
     }
-    return count
 }
-print(solution())
+
+print(result)
+
+// dfs 이용해서 푼 문젠데
+// 1. 그래프 만들고
+// 2. 인접한 0 노드들 쭉 돌면서 1로 만들어 준다.
+// 3. 더이상 못하면 탈출
+// 4. 이 작업을 모든 노드에 대해서 해주면 된다.
+// 5. 왜 모든 노드에 대해서 해주면 되냐면 어차피 이전에 했던건 1로 바뀌어 있음
+// 6. 결국 재귀로 쭉 돌고 나오게 되는데, 나오면 true 반환하게 될거임
+// 7. 하나도 없거나 맵 밖으로 벗어나면 false로 나오게 될꺼임
