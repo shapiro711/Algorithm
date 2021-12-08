@@ -1,41 +1,86 @@
 //
-//  11724_연결_요소의_개수.swift
+//  1012_유기농_배추.swift
 //  Algorithm
 //
-//  Created by Kim Do hyung on 2021/12/07.
+//  Created by Kim Do hyung on 2021/12/08.
 //
 
 import Foundation
 
-var firstLine = readLine()!.split(separator: " ").map { Int(String($0))! }
-var connection: [[Int]] = Array(repeating: [], count: firstLine[0])
-var visited: [Int] = Array(repeating: 0, count: firstLine[0])
-var count = 0
+var testCase = Int(readLine()!)!
+var result = [Int]()
+var n: Int = 0
+var m: Int = 0
+var vegetableCount: Int = 0
+var vegetableLocation = [[Int]]()
 
-for i in 0 ..< firstLine[1] {
-    let line = readLine()!.split(separator: " ").map { Int(String($0))! }
-    connection[line[0]-1].append(line[1]-1)
-    connection[line[1]-1].append(line[0]-1)
-}
+var graph: [[Int]] = Array(repeating: [], count: n)
 
-func dfs(node: Int) {
-    visited[node] = 1
-    
-    for newnode in connection[node] {
-        if visited[newnode] == 0 {
-            dfs(node: newnode)
+
+func makeGraph(x: Int) {
+    graph = Array(repeating: [], count: x)
+    for i in 0 ..< n {
+        for j in 0 ..< m  {
+            graph[i].append(0)
         }
     }
+    
+    for location in vegetableLocation {
+        graph[location[1]][location[0]] = 1
+    }
+}
+
+func dfs(x: Int, y: Int) -> Bool {
+    if x < 0 || x >= n || y < 0 || y >= m {
+        return false
+    }
+    
+    if graph[x][y] == 1 {
+        graph[x][y] = 0
+        dfs(x: x-1, y: y)
+        dfs(x: x+1, y: y)
+        dfs(x: x, y: y-1)
+        dfs(x: x, y: y+1)
+        return true
+    }
+    return false
 }
 
 func solution() {
-    for i in 0 ... firstLine[0]-1 {
-        if visited[i] == 0 {
-            count += 1
-            dfs(node: i)
+    var count = 0
+    for i in 0 ..< n {
+        for j in 0 ..< m {
+            if dfs(x: i, y: j) {
+                count += 1
+            }
         }
     }
-    print(count)
+    result.append(count)
 }
 
-solution()
+func reset() {
+    vegetableLocation.removeAll()
+    graph = Array(repeating: [], count: n)
+}
+
+
+for i in 0 ..< testCase {
+    var line = readLine()!.split(separator: " ").map {Int(String($0))!}
+    n = line[1]
+    m = line[0]
+    vegetableCount = line[2]
+    
+    for i in 0 ..< vegetableCount {
+        var vegetableLine = readLine()!.split(separator: " ").map {Int(String($0))!}
+        vegetableLocation.append(vegetableLine)
+    }
+    
+    makeGraph(x:n)
+    solution()
+    reset()
+}
+
+for result in result {
+    print(result)
+}
+

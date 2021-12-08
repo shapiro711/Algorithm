@@ -35,6 +35,10 @@
 		3F50E339275F23D2008D04F6 /* 2583_영역_구하기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2583_영역_구하기.swift"; sourceTree = "<group>"; };
 		3F50E33A275F35C7008D04F6 /* 2606_바이러스.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2606_바이러스.swift"; sourceTree = "<group>"; };
 		3F50E33B275F8878008D04F6 /* 11724_연결_요소의_개수.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "11724_연결_요소의_개수.swift"; sourceTree = "<group>"; };
+		3F50E33D2760694F008D04F6 /* 1012_유기농_배추.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1012_유기농_배추.swift"; sourceTree = "<group>"; };
+		3F50E33E27606B09008D04F6 /* 4036_섬의_개수.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "4036_섬의_개수.swift"; sourceTree = "<group>"; };
+		3F50E33F27606C13008D04F6 /* 1260_DFS와_BFS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1260_DFS와_BFS.swift"; sourceTree = "<group>"; };
+		3F50E3402760837B008D04F6 /* 10989_수_정렬하기-3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "10989_수_정렬하기-3.swift"; sourceTree = "<group>"; };
 		3F526106274CAE4700CB50FF /* Algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Algorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F526109274CAE4700CB50FF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3F526110274CAE5600CB50FF /* 1330_두_수_비교하기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1330_두_수_비교하기.swift"; sourceTree = "<group>"; };
@@ -127,7 +131,6 @@
 				3F50E339275F23D2008D04F6 /* 2583_영역_구하기.swift */,
 				3F50E33A275F35C7008D04F6 /* 2606_바이러스.swift */,
 				3F50E33B275F8878008D04F6 /* 11724_연결_요소의_개수.swift */,
-				3F50E32B275DF396008D04F6 /* 구현 */,
 			);
 			path = DFS;
 			sourceTree = "<group>";
@@ -137,6 +140,9 @@
 			children = (
 				3F50E337275F0EFE008D04F6 /* 미로_탈출.swift */,
 				3F50E338275F1791008D04F6 /* 2178_미로_탐색.swift */,
+				3F50E33D2760694F008D04F6 /* 1012_유기농_배추.swift */,
+				3F50E33E27606B09008D04F6 /* 4036_섬의_개수.swift */,
+				3F50E33F27606C13008D04F6 /* 1260_DFS와_BFS.swift */,
 			);
 			path = BFS;
 			sourceTree = "<group>";
@@ -160,6 +166,7 @@
 		3F526108274CAE4700CB50FF /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				3F50E32B275DF396008D04F6 /* 구현 */,
 				3F50E336275F0EE9008D04F6 /* BFS */,
 				3F50E332275E35A4008D04F6 /* DFS */,
 				3F50E32E275E0185008D04F6 /* 백준 연습  */,
@@ -213,6 +220,7 @@
 			children = (
 				3F801E2E2755E7F800DA5E3D /* 2750_수_정렬하기.swift */,
 				3F801E2F2755EF9000DA5E3D /* 2751_수_정렬하기-2.swift */,
+				3F50E3402760837B008D04F6 /* 10989_수_정렬하기-3.swift */,
 			);
 			name = "정렬";
 			path = "정렬";

@@ -15,9 +15,3 @@ for _ in 1...n {
     numbers.append(number)
 }
 
-func mergeSort(a: Int, b:Int) {
-    if a == b {
-        return
-    }
-    
-}
