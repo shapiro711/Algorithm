@@ -46,6 +46,9 @@
 		3F50E34727648F4C008D04F6 /* 10026_적록색약.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "10026_적록색약.swift"; sourceTree = "<group>"; };
 		3F50E3482765B452008D04F6 /* 1987_알파벳.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1987_알파벳.swift"; sourceTree = "<group>"; };
 		3F50E3492765C8A0008D04F6 /* 2210_숫자판_점프.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2210_숫자판_점프.swift"; sourceTree = "<group>"; };
+		3F50E34A2766FD2C008D04F6 /* 2644_촌수계산.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2644_촌수계산.swift"; sourceTree = "<group>"; };
+		3F50E34B276702A9008D04F6 /* 2668_숫자고르기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2668_숫자고르기.swift"; sourceTree = "<group>"; };
+		3F50E34E276717A7008D04F6 /* 10815_숫자_카드.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "10815_숫자_카드.swift"; sourceTree = "<group>"; };
 		3F526106274CAE4700CB50FF /* Algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Algorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F526109274CAE4700CB50FF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3F526110274CAE5600CB50FF /* 1330_두_수_비교하기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1330_두_수_비교하기.swift"; sourceTree = "<group>"; };
@@ -141,6 +144,7 @@
 				3F50E34727648F4C008D04F6 /* 10026_적록색약.swift */,
 				3F50E3482765B452008D04F6 /* 1987_알파벳.swift */,
 				3F50E3492765C8A0008D04F6 /* 2210_숫자판_점프.swift */,
+				3F50E34B276702A9008D04F6 /* 2668_숫자고르기.swift */,
 			);
 			path = DFS;
 			sourceTree = "<group>";
@@ -154,6 +158,7 @@
 				3F50E33E27606B09008D04F6 /* 4036_섬의_개수.swift */,
 				3F50E33F27606C13008D04F6 /* 1260_DFS와_BFS.swift */,
 				3F50E34627647A88008D04F6 /* 1697_숨바꼭질.swift */,
+				3F50E34A2766FD2C008D04F6 /* 2644_촌수계산.swift */,
 			);
 			path = BFS;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 				3F50E3422761BA99008D04F6 /* 부품_찾기.swift */,
 				3F50E3442761BE9D008D04F6 /* 떡볶이_떡_만들기.swift */,
 				3F50E3452761CFB7008D04F6 /* 1920_수_찾기.swift */,
+				3F50E34E276717A7008D04F6 /* 10815_숫자_카드.swift */,
 			);
 			name = "이진 탐색";
 			path = "이진 탐색";

@@ -35,6 +35,7 @@ func dfs(x: Int, y: Int, str: String, count: Int) {
         if newX < 0 || newX > 4 || newY < 0 || newY > 4 {
             continue
         }
+        
         dfs(x: newX, y: newY, str: str + map[newX][newY], count: count+1)
 
     }

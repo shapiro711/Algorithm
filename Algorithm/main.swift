@@ -1,55 +1,39 @@
 //
-//  2210_숫자판_점프.swift
+//  10815_숫자_카드.swift
 //  Algorithm
 //
-//  Created by Kim Do hyung on 2021/12/12.
+//  Created by Kim Do hyung on 2021/12/13.
 //
 
 import Foundation
 
-var map: [[String]] = Array(repeating: [], count: 5)
-var numberSet = Set<String>()
+var n = Int(readLine()!)!
+var nList = readLine()!.split(separator: " ").map { Int(String($0))! }.sorted()
 
-let dx = [1, -1, 0, 0]
-let dy = [0, 0, 1, -1]
-
-for i in 0...4 {
-    let line = readLine()!.split(separator: " ").map { String($0) }
-    map[i] = line
-}
-
-func dfs(x: Int, y: Int, str: String, count: Int) {
-    
-    if count == 5 {
-        numberSet.insert(str)
-        return
-    }
-    
-    var newX = 0
-    var newY = 0
-    
-    for i in 0...3 {
-        newX = x + dx[i]
-        newY = y + dy[i]
-        
-        if newX < 0 || newX > 4 || newY < 0 || newY > 4 {
-            continue
+var m = Int(readLine()!)!
+var mList = readLine()!.split(separator: " ").map { Int(String($0))! }
+var result = [Int]()
+func binarySearch(target:Int, start:Int, end: Int) -> Int {
+    while start <= end {
+        var mid = (start + end)/2
+        if nList[mid] == target {
+            return 1
+        } else if nList[mid] < target {
+            return binarySearch(target: target, start: mid+1, end: end)
+        } else if nList[mid] > target {
+            return binarySearch(target: target, start: start, end: mid-1)
         }
-        dfs(x: newX, y: newY, str: str + map[newX][newY], count: count+1)
-
     }
-    
-    return
+    return 0
 }
-
 
 func solution() {
-    for i in 0 ... 4 {
-        for j in 0 ... 4 {
-            dfs(x: i, y: j, str: map[i][j], count: 0)
-        }
+    for target in mList {
+        result.append(binarySearch(target: target, start: 0, end: nList.count-1))
     }
-    print(numberSet.count)
 }
 
 solution()
+for i in result {
+    print(i, terminator: " ")
+}
